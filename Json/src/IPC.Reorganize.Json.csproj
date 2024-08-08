@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>IPC.Reorganize.Json</RootNamespace>
+    <LangVersion>latestmajor</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/sboothza/IPC.Reorganize</RepositoryUrl>
+    <Title>IPC.Reorganize.Json</Title>
+    <Description>IPC.Reorganize.Json</Description>
+    <PackageProjectUrl>https://github.com/sboothza/IPC.Reorganize</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>0.0.1</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

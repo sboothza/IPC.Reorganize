@@ -1,4 +1,4 @@
-# Interprocess.Transmogrify.Json
+# IPC.Reorganize.Json
 
 Snap-in (mostly) replacement for System.Text.Json and Newtonsoft.Json
 
@@ -18,7 +18,3 @@ Built with .NET 8
 
 Slightly faster than both System.Text.Json and Newtonsoft.Json
 
-## History
-
-Originally a fork from [Stephen.JsonSerializerLib](https://github.com/sboothza/JsonSerializer)  
-Been cleaned up and hardened
