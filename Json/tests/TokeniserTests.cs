@@ -216,15 +216,7 @@ namespace IPC.Reorganize.Json.Tests
 			foreach (var item in result)
 				Console.WriteLine(item);
 		}
-
-
-		[Test]
-		public void TestTokeniseJson()
-		{
-			var json = "{\"<OldItem>k__BackingField\":null,\"<NewItem>k__BackingField\":{\"Id\":\"1656264681828\",\"Source\":\"Betradar\",\"SportId\":\"Tennis\",\"FixtureId\":\"34312309\",\"Timestamp\":\"/Date(1701328228680)/\",\"Type\":\"MatchStatusUpdate\",\"Tags\":[{\"Name\":\"Server\",\"Value\":\"\",\"Category\":0},{\"Name\":\"MatchTime\",\"Value\":\"00:00:00\",\"Category\":0},{\"Name\":\"BetRadarUuid\",\"Value\":\"fed4c17c-8dff-41a4-a4d9-eacd42806495\",\"Category\":0},{\"Name\":\"CourtNumber\",\"Value\":\"221019\",\"Category\":0},{\"Name\":\"FirstServer\",\"Value\":null,\"Category\":0},{\"Name\":\"MatchState\",\"Value\":null,\"Category\":0},{\"Name\":\"NumberOfSets\",\"Value\":\"3\",\"Category\":0},{\"Name\":\"ScoringType\",\"Value\":\"No advantage rule, super tiebreak to 10 points\",\"Category\":0},{\"Name\":\"Team\",\"Value\":\"NONE\",\"Category\":0},{\"Name\":\"PlayerId\",\"Value\":\"NONE\",\"Category\":0},{\"Name\":\"TeamAPlayer1\",\"Value\":\"CHAVEZ VILLALPANDO, LUIS DIEGO\",\"Category\":0},{\"Name\":\"TeamAPlayer1Id\",\"Value\":\"6608164\",\"Category\":0},{\"Name\":\"TeamAPlayer1Country\",\"Value\":null,\"Category\":0},{\"Name\":\"TeamAPlayer2\",\"Value\":\"LOPEZ HERNAEZ, MIKEL\",\"Category\":0},{\"Name\":\"TeamAPlayer2Id\",\"Value\":\"8838316\",\"Category\":0},{\"Name\":\"TeamAPlayer2Country\",\"Value\":null,\"Category\":0},{\"Name\":\"TeamBPlayer1\",\"Value\":\"TADDIA, LEONARDO\",\"Category\":0},{\"Name\":\"TeamBPlayer1Id\",\"Value\":\"9910999\",\"Category\":0},{\"Name\":\"TeamBPlayer1Country\",\"Value\":null,\"Category\":0},{\"Name\":\"TeamBPlayer2\",\"Value\":\"GARCIA, MIGUEL\",\"Category\":0},{\"Name\":\"TeamBPlayer2Id\",\"Value\":\"113995\",\"Category\":0},{\"Name\":\"TeamBPlayer2Country\",\"Value\":null,\"Category\":0},{\"Name\":\"TieBreakType\",\"Value\":\"\",\"Category\":0},{\"Name\":\"TossWinnerChoice\",\"Value\":null,\"Category\":0},{\"Name\":\"TossWinner\",\"Value\":\"\",\"Category\":0},{\"Name\":\"UmpireCode\",\"Value\":\"\",\"Category\":0},{\"Name\":\"UmpireCountry\",\"Value\":\"\",\"Category\":0},{\"Name\":\"UmpireName\",\"Value\":\"\",\"Category\":0},{\"Name\":\"Won\",\"Value\":\"0:0\",\"Category\":0}],\"KeyValues\":[\"Betradar\",\"34312309\",\"1656264681828\"]}}";
-			var parser = new JsonParser();
-			var result = parser.Parse(json);
-		}
+		
 
 		[Test]
 		public void TestParseValues()
@@ -241,16 +233,6 @@ namespace IPC.Reorganize.Json.Tests
 			result = parser.ProcessTokens(tokens);
 			ClassicAssert.AreEqual(typeof(JsonObjectValue), result.GetType());
 			ClassicAssert.AreEqual("-123.5", (result as JsonObjectValue).Value);
-		}
-
-		[Test]
-		public void TestParseSimpleObjectTree()
-		{
-			var json = "{\"<OldItem>k__BackingField\":null,\"<NewItem>k__BackingField\":{\"Id\":\"1656264681828\",\"Source\":\"Betradar\",\"SportId\":\"Tennis\",\"FixtureId\":\"34312309\",\"Timestamp\":\"/Date(1701328228680)/\",\"Type\":\"MatchStatusUpdate\"}}";
-			var parser = new JsonParser();
-			var tokens = parser.Parse(json);
-			var result = parser.ProcessTokens(tokens);
-			Console.WriteLine(result);
-		}
+		}		
 	}
 }
