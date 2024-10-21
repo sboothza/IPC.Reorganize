@@ -25,7 +25,7 @@ public static class Naming
 			for (var i = 0; i < tempParts.Length; i++)
 			{
 				tempParts[i] = tempParts[i]
-					.ToLower();
+					.ToLowerInvariant();
 			}
 			return tempParts.Where(p => !string.IsNullOrEmpty(p))
 							.ToArray();
@@ -51,7 +51,7 @@ public static class Naming
 			for (var i = 0; i < tempParts.Count; i++)
 			{
 				tempParts[i] = tempParts[i]
-					.ToLower();
+					.ToLowerInvariant();
 			}
 
 			return tempParts.Where(p => !string.IsNullOrEmpty(p))
@@ -64,8 +64,8 @@ public static class Naming
 		if (string.IsNullOrEmpty(name))
 			return name;
 
-		return ("" + name[0]).ToUpper() + name[1..]
-			.ToLower();
+		return ("" + name[0]).ToUpperInvariant() + name[1..]
+			.ToLowerInvariant();
 	}
 
 	public static string ToPascalCase(this string name)
