@@ -163,7 +163,7 @@ namespace IPC.Reorganize.Json
 			}
 
 			var test = sb.ToString()
-						 .ToLower();
+						 .ToLowerInvariant();
 			if (test != "true" && test != "false" && test != "null")
 				throw new Exception("Invalid - expected true false or null");
 
