@@ -69,6 +69,16 @@ public class NamingTests
 		ClassicAssert.AreEqual("this_is_a_test", match);
 	}
 
+        [Test]
+	public void TestCultureSafety()
+	{
+	        Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("tr-TR");
+	
+	        var test = "ThisIsATest";
+	        var match = test.ConvertName(NamingOptions.SnakeCase);
+	        ClassicAssert.AreEqual("this_is_a_test", match);
+	}
+
 	[Test]
 	public void TestNull()
 	{
