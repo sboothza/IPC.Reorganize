@@ -2,26 +2,26 @@ namespace IPC.Reorganize.Json;
 
 public class JsonToken
 {
-	protected JsonToken()
-	{
-	}
+    protected JsonToken()
+    {
+    }
 }
 
 public class StringToken(string value) : JsonToken
 {
-	public string Value { get; set; } = value;
-	public override string ToString() => $"str:{Value}";
+    public string Value { get; set; } = value;
+    public override string ToString() => $"str:{Value}";
 }
 
 public class NumberToken(string value) : JsonToken
 {
-	public string Value { get; set; } = value;
-	public override string ToString() => $"num:{Value}";
+    public string Value { get; set; } = value;
+    public override string ToString() => $"num:{Value}";
 }
 
 public class UnquotedConstantToken(string value) : JsonToken
 {
-	public string Value { get; set; } = value;
+    public string Value { get; set; } = value;
 }
 
 public class ObjectStartToken : JsonToken

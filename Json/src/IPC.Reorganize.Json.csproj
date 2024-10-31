@@ -10,7 +10,7 @@
     <Description>IPC.Reorganize.Json</Description>
     <PackageProjectUrl>https://github.com/sboothza/IPC.Reorganize</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
